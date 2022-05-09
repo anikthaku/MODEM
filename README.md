@@ -3,7 +3,7 @@
 
 ## __MOTIVATION__
 ---
-In the old days, finding monuments was considered a monumental task for archeologists. The story of the accidental discovery of the famous Khajuraho temple inspired me to look for evidence of monuments scattered around the world through satellite images. Given the recent advancement of CNNs and the easy availability of satellite images, I could concoct a solution to discover satellite images automatically.
+In the old days, finding monuments was considered a monumental task for archaeologists. The story of the accidental discovery of the famous Khajuraho temple inspired me to look for evidence of monuments scattered around the world through satellite images. Given the recent advancement of CNNs and the easy availability of satellite images, I could concoct a solution to discover satellite images automatically.
 
 ## __PROBLEM STATEMENT__
 ---
@@ -63,3 +63,9 @@ Run the following on windows powershell
 
 1. Make changes to image locations if needed and run `python data_collection.py` to store the images for training the model.
 2. Choose either `Monument_CNN_TransferLearn.ipynb` or `Monument_CNN.ipynb` and run.
+
+## __LICENSE__
+---
++ This repository has no open-source license.
++ You can't modify or redistribute the code without explicit permission. However, you are allowed to run the code for private/educational use only.
++ According to terms and conditions of GitHub, in absence of any open source license, every user has the right to view and fork any public repository only.
