@@ -1,4 +1,6 @@
 ## **MO**nument **D**etection from sat**E**llite i**M**age (MODEM)
+
+Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
 <br>
 
 ## __MOTIVATION__
