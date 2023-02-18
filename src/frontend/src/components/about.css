@@ -1,0 +1,61 @@
+.cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.reverse-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .cont {
+    flex-direction: column;
+  }
+  .reverse-cont {
+    flex-direction: column-reverse;
+  }
+  .text {
+    font-size: 0.8rem;
+    list-style-position: inside;
+  }
+  .insideCont img {
+    /* height: 50vh; */
+    width: 100%;
+    height: auto
+  }
+}
+@media(max-width: 800px){
+  .headText{
+    font-size: 1rem;
+  }
+}
+.insideCont {
+  width: 90%;
+  height: 90%;
+  margin: 2rem;
+  object-fit: cover;
+  text-align: center;
+}
+
+.insideCont img {
+  height: 50vh;
+}
+
+.text {
+  text-align: justify;
+  letter-spacing: 0.1rem;
+  list-style-position: inside;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+b, strong {
+  font-weight: bold;
+}

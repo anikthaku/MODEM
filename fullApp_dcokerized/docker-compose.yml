@@ -1,0 +1,66 @@
+# version: '3.8'
+
+# networks:
+#   modem:
+
+# services:
+#   backend:
+#     # env_file:
+#     #   - backend/.env
+#     build:
+#       context: ./backend/
+#       dockerfile: ./Dockerfile
+#     restart: always
+#     ports:
+#       - "127.0.0.1:8000:8000"
+#     expose:
+#       - 8000
+#     container_name: backend
+#     networks:
+#       - modem
+
+#   frontend:
+#     env_file:
+#       - frontend/.env
+#     build:
+#       context: ./frontend/
+#       dockerfile: ./Dockerfile
+#     restart: always
+#     ports:
+#       - "127.0.0.1:3006:3006"
+#     expose:
+#       - 3006
+#     container_name: frontend
+#     networks:
+#       - modem
+
+version: '3.8'
+
+networks:
+  modem:
+
+services:
+  backend:
+    image: docker.io/anikthaku/modem-full:backend
+    restart: always
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    expose:
+      - 8000
+    container_name: backend
+    networks:
+      - modem
+
+  frontend:
+    image: docker.io/anikthaku/modem-full:frontend
+    restart: always
+    ports:
+      - "3006:3006"
+    expose:
+      - 3006
+    container_name: frontend
+    networks:
+      - modem
+    depends_on:
+      - backend

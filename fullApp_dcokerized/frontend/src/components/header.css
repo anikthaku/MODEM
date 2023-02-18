@@ -1,0 +1,123 @@
+* {
+  text-decoration: none;
+  font-weight: 600;
+}
+.rightMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 1rem;
+  }
+}
+@media(max-width: 600px){
+  .rightMenu img{
+    font-size: 2px;
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
+  }
+  .leftMenu a{
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
+}
+.navUl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navUl li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.header {
+  /* display: flex;
+  /* background: linear-gradient(black, white); */
+  /* background-color: #ffffff00; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 4rem;
+  position: fixed;
+  overflow-y: hidden;
+  color: white;
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+.header-scroll {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+.leftMenu,
+.navUl a {
+  color: white;
+}
+.leftMenuScroll,
+.navUlScroll a {
+  color: white;
+}
+.midMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Desktop View*/
+.header {
+  @media (max-width: 425px) {
+    /* padding: 0.4rem; */
+    min-height: 1rem;
+    font-size: 0.7rem;
+    font-weight: 200;
+    a img {
+      height: 1rem;
+      padding-left: 0.5rem;
+    }
+  }
+  min-height: 3.5rem;
+  position: fixed;
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.midMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    flex-wrap: nowrap;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 648px) {
+  /*Mobile View */
+  .header {
+    padding: 0px 10px;
+  }
+}
+
+.leftMenu,
+.midMenu {
+  font-size: large;
+  letter-spacing: 2px;
+}
+a {
+  cursor: pointer;
+}
