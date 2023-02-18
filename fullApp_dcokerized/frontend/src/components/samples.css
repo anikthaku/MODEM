@@ -1,0 +1,149 @@
+.draggable {
+  /* Indicate the element draggable */
+  cursor: move;
+
+  /* It will be positioned absolutely */
+  position: absolute;
+
+  /* Doesn't allow to select the content inside */
+  user-select: none;
+}
+
+.mainCard {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 40vw;
+  height: auto;
+  /* padding: 3rem; */
+  flex-wrap: wrap;
+}
+.card-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  /* border-radius: 0.6rem; */
+  background-color: rgba(0, 0, 0, 0.895);
+  margin: 0.2rem;
+  color: white;
+}
+.card-image-inside img{
+  object-fit: cover;
+}
+.card-image img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.inside-img{
+  height: 330px;
+  width: 300px;
+  overflow: hidden;
+}
+.inside-img img{  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media(max-width: 800px){
+  .headText{
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 850px){
+  .mainCard{
+    flex-direction: column;
+  }
+  .card{
+    /* flex-direction: column; */
+    width: 90%;
+  }
+  
+  /* .card-image .inside-img{
+    position: center;
+  } */
+}
+
+@media(max-width: 600px){
+  .card{
+    flex-direction: column;
+  }
+}
+
+.headText {
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.container {
+  padding: 2rem;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.contDouble{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contDouble {
+    flex-direction: column;
+  }
+}
+
+.wrap {
+  border-radius: 0.8rem;
+  border: 3px solid black;
+  background-color: rgba(0, 0, 0, 0.895);
+  margin: 0.2rem;
+}
+.insideCount img {
+  /* border-radius: 0.8rem; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapText {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0.8rem;
+  color: white;
+}
+
+.insideText {
+  text-align: center;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image{
+  
+}

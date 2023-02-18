@@ -11,14 +11,13 @@ The goal is to label a given satellite image as a monument with sufficient evide
 
 ## __SOLUTION DETAILS__
 ---
-The solution has three main modules:
+The solution has two modules:
 1. **Data Collection Module:** I started with a small sample of hand-collected coordinates comprising 39 monuments and 25 random landmarks in India. Then I created a tool to collect satellite images using "[Bhuvanlite](https://bhuvanlite.nrsc.gov.in/)". However, this task was challenging without well-defined REST APIs, which I overcame by using the Mozilla plugin's automated screenshots of browser images. The images were trimmed, rotated, and shifted to create more samples. Thus I was able to generate 384 satellite images. 
 
 2. **Model Selection and Tuning Parameters:** I used two different approaches to create models: <br>
 + Bare-bones CNN: Used a few Conv layers with max-pooling and some dense layers with relu activation in the penultimate layer and finally a dense sigmoid layer to achieve 0.9826 and 0.9487 as training and test accuracy, respectively.
 + Transfer learning: Used "[MobileNetV2](https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4)" and a few dense layers with relu activation to achieve 1.0 training and testing accuracy.
 
-3. **Work In progress:** I plan to use CAM (Class Activation Map) techniques to explain the model decisions to ease the search for unknown monuments with reasonable confidence and hints.
 
 ## __RESULTS__
 ---
