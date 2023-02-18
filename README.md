@@ -5,7 +5,7 @@ Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azur
 
 ## __MOTIVATION__
 ---
-In the old days, finding monuments was considered a monumental task for archaeologists. The story of the accidental discovery of the famous Khajuraho temple inspired me to look for evidence of monuments scattered around the world through satellite images. Given the recent advancement of CNNs and the easy availability of satellite images, I could concoct a solution to discover satellite images automatically.
+In the old days, finding monuments was considered a monumental task for archaeologists. The story of the accidental discovery of the famous Khajuraho temple inspired me to look for evidence of monuments scattered around the world through satellite images. Given the recent advancement of CNNs and the easy availability of satellite images, I could concoct a solution to discover monuments from satellite images automatically.
 
 ## __PROBLEM STATEMENT__
 ---
