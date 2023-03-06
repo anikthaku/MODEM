@@ -21,16 +21,16 @@ const Header = () => {
     return (
         <div className={colorChange ? 'header header-scroll leftMenuScroll navUlScroll' : 'header'} id={"hero"}>
             <div className="leftMenu">
-                <Link to="home" spy={true} smooth={true} offset={50} duration={500}>MODEM : Monument detection from satelite image</Link>
+                <Link to="home" spy={true} smooth={true} offset={50} duration={500}>MODEM : MOnument Detection from satEllite iMage </Link>
             </div>
             <div className="midMenu">
                 <ul className="navUl">
                     <li>
                         <Link to="home" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="samples" spy={true} smooth={true} offset={50} duration={500}>Samples</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>
                     </li>

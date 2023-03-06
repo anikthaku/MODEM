@@ -1,3 +1,4 @@
+
 .draggable {
   /* Indicate the element draggable */
   cursor: move;
@@ -11,14 +12,17 @@
 
 .mainCard {
   display: flex;
-  /* justify-content: space-around; */
-  justify-content: center;
+  justify-content: space-around;
+  /* justify-content: center; */
   align-items: center;
   flex-wrap: wrap;
+  margin: 1rem;
 }
 
-
-
+/* .cardd{
+  width: auto;
+  height: 50vh;
+} */
 
 .card {
   display: flex;
@@ -40,18 +44,19 @@
   background-color: rgba(0, 0, 0, 0.895);
   margin: 0.2rem;
   color: white;
+  /* height: 60vh; */
 }
 .card-image-inside img{
   object-fit: cover;
 }
 .card-image img {
-  height: 300px;
-  width: 300px;
+  height: 15rem;
+  width: 20rem;
   object-fit: cover;
 }
 .inside-img{
-  height: 330px;
-  width: 300px;
+  /* height: 300px;
+  width: 300px; */
   overflow: hidden;
 }
 .inside-img img{  
@@ -90,6 +95,14 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 700;
+}
+.headTextHome {
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
 }
 .container {
   padding: 2rem;

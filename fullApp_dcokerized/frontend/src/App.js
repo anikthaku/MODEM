@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
       <ImageUpload />
-      <Samples />
+      {/* <Samples /> */}
       <About />
     </div>
   )

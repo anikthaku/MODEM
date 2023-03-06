@@ -11,6 +11,8 @@ import { DropzoneArea } from 'material-ui-dropzone';
 import { common } from '@material-ui/core/colors';
 import Clear from '@material-ui/icons/Clear';
 import "./home.css"
+import "./index.css"
+import HomeSamples from "./components/HomeSamples";
 
 const ColorButton = withStyles((theme) => ({
   root: {
@@ -50,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: 'flex',
     justifyContent: "center",
-    padding: "4em 1em 0 1em",
+    // padding: "4em 1em 0 1em",
     margin: "4rem 0",
   },
   mainContainer: {
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageCard: {
     margin: "auto",
-    maxWidth: "50vw",
+    width: "40vw",
     minHeight: "50vh",
     backgroundColor: 'rgba(0, 0, 0, 0.4)',
     boxShadow: '0px 9px 70px 0px rgb(0 0 0 / 30%) !important',
@@ -74,12 +76,18 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid black',
     '&:hover': {
       backgroundColor: 'transparent',
-
+    },
+    '@media(max-width: 500px)' : {
+      width: '90vw',
+    },
+    '@media(max-width: 850px)' : {
+      width: '60vw',
     },
   },
   content: {
-    maxWidth: "50vw",
+    // minWidth: "60vw",
     minHeight: "50vh",
+
   },
   imageCardEmpty: {
     height: 'auto',
@@ -122,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'transparent !important',
     borderColor: 'transparent !important',
     color: '#000000a6 !important',
-    fontWeight: 'bolder',
+    // fontWeight: 'bolder',
     padding: '1px 24px 1px 16px',
   },
   tableBody: {
@@ -163,6 +171,52 @@ export const ImageUpload = () => {
 
 
 
+
+  // const [scroll, setScroll] = useState(0);
+  // const [startY, setStartY] = useState(0);
+  // const [startScroll, setStartScroll] = useState(0);
+  // const [animationId, setAnimationId] = useState(null);
+
+  // const handleMouseDown = (e) => {
+  //   setStartY(e.clientY);
+  //   setStartScroll(scroll);
+  //   document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mouseup", handleMouseUp);
+  // };
+
+  // const handleMouseMove = (e) => {
+  //   const diff = e.clientY - startY;
+  //   setScroll(startScroll - diff);
+  // };
+
+  // const handleMouseUp = () => {
+  //   document.removeEventListener("mousemove", handleMouseMove);
+  //   document.removeEventListener("mouseup", handleMouseUp);
+  //   let currentScroll = scroll;
+  //   const scrollStep = -currentScroll / (1000 / 15);
+
+  //   const animateScroll = () => {
+  //     currentScroll += scrollStep;
+  //     window.scrollTo(0, currentScroll);
+  //     if (currentScroll > 0) {
+  //       setAnimationId(requestAnimationFrame(animateScroll));
+  //     } else {
+  //       cancelAnimationFrame(animationId);
+  //     }
+  //   };
+
+  //   setAnimationId(requestAnimationFrame(animateScroll));
+  // };
+
+  // useEffect(() => {
+  //   setScroll(window.scrollY);
+  // }, []);
+
+
+
+
+
+
   const sendFile = async () => {
     if (image) {
       let formData = new FormData();
@@ -170,7 +224,7 @@ export const ImageUpload = () => {
       let res = await axios({
         method: "post",
         url: process.env.REACT_APP_API_URL,
-        // url: '/predict',
+        // url: 'http://localhost:8000/predict',
         data: formData,
       });
       if (res.status === 200) {
@@ -222,36 +276,6 @@ export const ImageUpload = () => {
 
   return (
     <React.Fragment>
-      {/* <button
-        class="navbar-toggler navbar-toggler-right d-md-none"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>  */}
-      {/* <Container maxWidth={false} className={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        height: "100vh"
-      }} disableGutters={true}> */}
-
       <div id="home">
         <Container maxWidth={false} className={classes.mainContainer} disableGutters={true}>
           <Grid
@@ -262,6 +286,10 @@ export const ImageUpload = () => {
             alignItems="center"
             spacing={2}
           >
+            <HomeSamples />
+        
+
+
             <Grid item xs={12}>
               <Card className={`${classes.imageCard} ${!image ? classes.imageCardEmpty : ''}`}>
                 {image && <CardActionArea>
@@ -276,7 +304,7 @@ export const ImageUpload = () => {
                 {!image && <CardContent className={classes.content} >
                   <DropzoneArea
                     acceptedFiles={['image/*']}
-                    dropzoneText={"Drag and drop / Upload a Satellite image to process"}
+                    dropzoneText={"UPLOAD or DRAG and DROP a satellite image."}
                     onChange={onSelectFile}
                   />
                 </CardContent>}
@@ -285,16 +313,18 @@ export const ImageUpload = () => {
                     <Table className={classes.table} size="small" aria-label="simple table">
                       <TableHead className={classes.tableHead}>
                         <TableRow className={classes.tableRow}>
-                          <TableCell className={classes.tableCell1}>Label:</TableCell>
-                          <TableCell align="right" className={classes.tableCell1}>Confidence:</TableCell>
+                          {/* <TableCell className={classes.tableCell1}>Label:</TableCell> */}
+                          {/* <TableCell align="right" className={classes.tableCell1}>Confidence:</TableCell> */}
                         </TableRow>
                       </TableHead>
                       <TableBody className={classes.tableBody}>
                         <TableRow className={classes.tableRow}>
                           <TableCell component="th" scope="row" className={classes.tableCell}>
-                            {data.class}
+                            <div className="center">
+                              <i>With</i> <span className="color">{confidence}%</span> <i> Confidence, this is a </i><span className="color">{data.class}.</span>
+                            </div>
                           </TableCell>
-                          <TableCell align="right" className={classes.tableCell}>{confidence}%</TableCell>
+                          {/* <TableCell align="right" className={classes.tableCell}>{confidence}%</TableCell> */}
                         </TableRow>
                       </TableBody>
                     </Table>
