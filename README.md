@@ -3,7 +3,7 @@
 Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
 
 <video width="640" height="480" controls>
-  <source src="docs/video/HowToUse.mp4" type="video/mp4"></video>
+  <source src="https://user-images.githubusercontent.com/76057469/223475462-9e6a9db4-b9a6-426c-8199-937cfc9c3608.mp4" type="video/mp4"></video>
 
 <p style="text-align: center;"><b><i></i>How to use</b></p>
 
