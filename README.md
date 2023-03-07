@@ -3,6 +3,12 @@
 Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
 <br>
 
+| ![](docs/gif/howToUse.gif) |
+|:---:|
+| <b> _*How to use*_</b>|
+
+<br>
+
 ## __MOTIVATION__
 ---
 In the old days, finding monuments was considered a monumental task for archaeologists. The story of the accidental discovery of the famous Khajuraho temple inspired me to look for evidence of monuments scattered around the world through satellite images. Given the recent advancement of CNNs and the easy availability of satellite images, I could concoct a solution to discover monuments from satellite images automatically.
@@ -53,15 +59,24 @@ Monument detection has many positive societal impacts. It can bolster local tour
 
 ## __PRE REQUISITE__
 ---
-You will need to install some python libraries and [geckodriver](https://github.com/mozilla/geckodriver/releases)
-<br>
+#### __Tech Stack —__
++ Python __3.10.10__
++ Node __18.4.0__
++ Npm __9.4.1__ or Yarn __1.22.19__
++ Docker __20.10.22__
++ Docker-compose __2.15.1__
+
+#### __For data_collection.py__ — You will need to install some python libraries and [geckodriver](https://github.com/mozilla/geckodriver/releases).
 Run the following on windows powershell
 + `pip install selenium`
 + `pip install Pillow`
+#### __For api__ — Open windows powershell in api folder and run the following command 
++ `pip install -r requirements.txt`
+#### __For frontend__ — Open windows powershell in frontend folder and run the following command
++ `npm i` or `yarn install`
 
 ## __HOW TO USE__
 ---
-
 1. Make changes to image locations if needed and run `python data_collection.py` to store the images for training the model.
 2. Choose either `Monument_CNN_TransferLearn.ipynb` or `Monument_CNN.ipynb` and run.
 

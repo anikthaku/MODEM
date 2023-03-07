@@ -1,39 +1,3 @@
-# version: '3.8'
-
-# networks:
-#   modem:
-
-# services:
-#   backend:
-#     # env_file:
-#     #   - backend/.env
-#     build:
-#       context: ./backend/
-#       dockerfile: ./Dockerfile
-#     restart: always
-#     ports:
-#       - "127.0.0.1:8000:8000"
-#     expose:
-#       - 8000
-#     container_name: backend
-#     networks:
-#       - modem
-
-#   frontend:
-#     env_file:
-#       - frontend/.env
-#     build:
-#       context: ./frontend/
-#       dockerfile: ./Dockerfile
-#     restart: always
-#     ports:
-#       - "127.0.0.1:3006:3006"
-#     expose:
-#       - 3006
-#     container_name: frontend
-#     networks:
-#       - modem
-
 version: '3.8'
 
 networks:
