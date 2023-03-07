@@ -1,13 +1,11 @@
 ## **MO**nument **D**etection from sat**E**llite i**M**age (MODEM)
 
 Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
-<br>
 
-<!-- | ![](docs/gif/howToUse.gif) | -->
-| <video width="640" height="480" controls>
-  <source src="docs/video/HowToUse.mp4" type="video/mp4"></video> |
-|:---:|
-| <b> _*How to use*_</b>|
+<video width="640" height="480" controls>
+  <source src="docs/video/HowToUse.mp4" type="video/mp4"></video>
+
+<p style="text-align: center;"><b><i></i>How to use</b></p>
 
 <br>
 
