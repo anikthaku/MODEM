@@ -4,7 +4,11 @@ Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azur
 <br>
 
 <!-- | ![](docs/gif/howToUse.gif) | -->
-|https://user-images.githubusercontent.com/76057469/223475462-9e6a9db4-b9a6-426c-8199-937cfc9c3608.mp4 |
+|
+<video width="1280" height="720" controls>
+  <source src="docs/video/HowToUse.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>|
 |:---:|
 | <b> _*How to use*_</b>|
 
