@@ -7,6 +7,7 @@ Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azur
 
 [![How to use](https://i.imgur.com/vKb2F1B.png)](https://user-images.githubusercontent.com/76057469/223475462-9e6a9db4-b9a6-426c-8199-937cfc9c3608.mp4)
 
+
 <p style="text-align: center;"><b><i></i>How to use</b></p>
 
 <br>
