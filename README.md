@@ -3,11 +3,9 @@
 Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
 <br>
 
-https://drive.google.com/file/d/18wvY83n66y9Z1vlX81bQDMT6yxUcFW8P/view?usp=share_link
-
-<!-- | ![](docs/gif/howToUse.gif) | -->
-<!-- |:---:|
-| <b> _*How to use*_</b>| -->
+| ![](docs/gif/howToUse.gif) |
+|:---:|
+| <b> _*How to use*_</b>|
 
 <br>
 
