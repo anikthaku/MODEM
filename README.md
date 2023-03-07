@@ -3,9 +3,10 @@
 Try it out : http://monument-detection-from-satellite-image.eastus.cloudapp.azure.com
 <br>
 
-| ![](docs/gif/howToUse.gif) |
-|:---:|
-| <b> _*How to use*_</b>|
+![](docs/gif/howToUse.gif)
+<!-- | ![](docs/gif/howToUse.gif) | -->
+<!-- |:---:|
+| <b> _*How to use*_</b>| -->
 
 <br>
 
