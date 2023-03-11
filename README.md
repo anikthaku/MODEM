@@ -51,11 +51,27 @@ The solution has two modules:
     | ![](docs/img/Transfer_Wrong.png) |
     | <b>Wrong Predictions</b>|
 
+<br>
+
+## __END TO END APPLICATION DEVELOPMENT DETAILS__
+---
+1. __Backend:__ As mentioned earlier, I had the transfer-learning-based model ready to predict the output for the user-given image at the frontend.
+
+2. __API:__ The backend requires an API for receiving the input image from the user and returning the predicted result. I preferred _FastApi_ as it is fast and requires minimal effort in comparison to _Django_ or _Flask_.
+
+3. __Frontend:__ The frontend consists of a sample satellite image gallery and a drop zone to try them out. One can also upload custom images in the drop zone. I preferred to make frontend _react-based_, as it is one of the latest libraries for frontend development.
+
+4. __Docker:__ Once the whole project was up, the best way to make it work on any system was to dockerize it. The frontend and backend have been dockerized separately, and then both run in a single docker container.
+
+5. __Hosting:__ As I had dockerized my project, I simply needed a virtual machine with docker to run my project. I decided to host it on azure and used “_haproxy_” for load balancing.
+
+
 ## __CONCLUSION__
 ---
 Through my experiments, I can safely conclude that detecting monuments from satellite images can be achieved even with smaller samples with the help of transfer learning. Even though the satellite images of monuments are not present in a well-organized manner in any data repository, however, thanks to some government initiatives like "[Bhuvanlite](https://bhuvanlite.nrsc.gov.in/)", we can leverage their infrastructure to collect data. After these experiments, I feel that the next logical step is to decode the underlying patterns in monuments using explainable AI (like Class Activation Map techniques) to help archeologists search in the right direction.
 
 Monument detection has many positive societal impacts. It can bolster local tourism opportunities and help local people identify their rich cultural heritage.
+
 
 ## __PRE REQUISITE__
 ---
@@ -63,6 +79,7 @@ Monument detection has many positive societal impacts. It can bolster local tour
 + Python __3.10.10__
 + Node __18.4.0__
 + Npm __9.4.1__ or Yarn __1.22.19__
++ React
 + Docker __20.10.22__
 + Docker-compose __2.15.1__
 
