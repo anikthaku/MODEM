@@ -57,7 +57,7 @@ The solution has two modules:
 ---
 1. __Backend:__ As mentioned earlier, I had the transfer-learning-based model ready to predict the output for the user-given image at the frontend.
 
-2. __API:__ The backend requires an API for receiving the input image from the user and returning the predicted result. I preferred _FastApi_ as it is fast and requires minimal effort in comparison to _Django_ or _Flask_.
+2. __API:__ The backend requires an API for receiving the input image from the user and returning the predicted result. I preferred _FastAPI_ as it is fast and requires minimal effort in comparison to _Django_ or _Flask_.
 
 3. __Frontend:__ The frontend consists of a sample satellite image gallery and a drop zone to try them out. One can also upload custom images in the drop zone. I preferred to make frontend _react-based_, as it is one of the latest libraries for frontend development.
 
